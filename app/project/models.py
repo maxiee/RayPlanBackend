@@ -40,5 +40,6 @@ class Task(models.Model):
         max_length=32,
         choices = TASK_STATUS
     )
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
